@@ -24,10 +24,12 @@ function App() {
 
   const goToNextWord = () => {
     setCurrentIndex(currentIndex => (currentIndex + 1) % words.length);
+    setLanguage('german01'); // Set language to German
   };
 
   const goToPreviousWord = () => {
     setCurrentIndex(currentIndex => (currentIndex - 1 + words.length) % words.length);
+    setLanguage('german01'); // Set language to German
   };
 
   // Change language and maintain the current index
