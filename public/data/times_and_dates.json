@@ -1,0 +1,16 @@
+{
+    "german": [
+        "Wie spät ist es?", "Wann treffen wir uns?", "Heute ist Montag", 
+        "Mein Geburtstag ist am 1. Januar", "Das Geschäft öffnet um 9 Uhr", 
+        "Das Konzert beginnt um 20 Uhr", "Wir haben Sommerzeit", 
+        "Vergiss nicht, die Uhr umzustellen", "Das ist der längste Tag des Jahres", 
+        "Die Feier ist nächste Woche"
+    ],
+    "spanish": [
+        "¿Qué hora es?", "¿Cuándo nos encontramos?", "Hoy es lunes", 
+        "Mi cumpleaños es el 1 de enero", "La tienda abre a las 9", 
+        "El concierto comienza a las 20", "Estamos en horario de verano", 
+        "No olvides cambiar el reloj", "Este es el día más largo del año", 
+        "La fiesta es la próxima semana"
+    ]
+}

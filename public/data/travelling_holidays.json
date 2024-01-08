@@ -1,0 +1,16 @@
+{
+    "german": [
+        "Ich reise gerne", "Wo ist der Bahnhof?", "Ich habe meinen Flug verpasst", 
+        "Können Sie ein gutes Restaurant empfehlen?", "Ich möchte ein Zimmer reservieren", 
+        "Ein Tisch für zwei, bitte", "Wie komme ich zum Flughafen?", 
+        "Ich würde gerne ein Auto mieten", "Ist das Frühstück inbegriffen?", 
+        "Können Sie mir einen Stadtplan geben?"
+    ],
+    "spanish": [
+        "Me gusta viajar", "¿Dónde está la estación?", "He perdido mi vuelo", 
+        "¿Puede recomendar un buen restaurante?", "Quiero reservar una habitación", 
+        "Una mesa para dos, por favor", "¿Cómo llego al aeropuerto?", 
+        "Me gustaría alquilar un coche", "¿Está incluido el desayuno?", 
+        "¿Puede darme un mapa de la ciudad?"
+    ]
+}

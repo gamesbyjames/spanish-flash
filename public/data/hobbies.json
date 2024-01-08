@@ -1,0 +1,14 @@
+{
+    "german": [
+        "Ich spiele gerne Fußball", "Ich lese ein Buch", "Ich gehe gerne schwimmen", 
+        "Malen ist mein Hobby", "Ich spiele Klavier", "Ich sammle Briefmarken", 
+        "Ich gehe gerne wandern", "Fotografieren ist meine Leidenschaft", 
+        "Ich fahre gerne Fahrrad", "Ich lerne gerne neue Sprachen"
+    ],
+    "spanish": [
+        "Me gusta jugar al fútbol", "Estoy leyendo un libro", "Me gusta nadar", 
+        "Pintar es mi pasatiempo", "Toco el piano", "Colecciono sellos", 
+        "Me gusta ir de senderismo", "La fotografía es mi pasión", 
+        "Me gusta montar en bicicleta", "Me gusta aprender nuevos idiomas"
+    ]
+}

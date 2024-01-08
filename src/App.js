@@ -48,6 +48,9 @@ const App = () => {
         <div>
           <button onClick={() => selectTopic('weather')}>Weather</button>
           <button onClick={() => selectTopic('introductions')}>Introductions</button>
+          <button onClick={() => selectTopic('hobbies')}>Hobbies</button>
+          <button onClick={() => selectTopic('times_and_dates')}>Times and Dates</button>
+          <button onClick={() => selectTopic('travelling_holidays')}>Travelling / Holidays</button>
           <button onClick={() => selectTopic('other')}>Other</button>
         </div>
       ) : (
