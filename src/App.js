@@ -1,4 +1,77 @@
 import React, { useState, useEffect } from 'react';
+import Flashcard from './components/Flashcard';
+import './App.css';
+
+const App = () => {
+  const [words, setWords] = useState({ german: [], spanish: [] });
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentTopic, setCurrentTopic] = useState(null);
+  const [currentLanguage, setCurrentLanguage] = useState('german');
+  //const [isLoading, setIsLoading] = useState(false);
+
+
+  useEffect(() => {
+    if (currentTopic) {
+      fetch(`./data/${currentTopic}.json`)
+        .then(res => res.json())
+        .then(data => {
+          setWords({ german: data.german || [], spanish: data.spanish || [] });
+          setCurrentIndex(0);
+        })
+        .catch(err => console.error("Fetching error:", err));
+    }
+  }, [currentTopic]);
+
+  const toggleLanguage = () => {
+    setCurrentLanguage(lang => lang === 'german' ? 'spanish' : 'german');
+  };
+
+  const selectTopic = (topic) => {
+    setCurrentTopic(topic);
+    setCurrentLanguage('german'); // Set language to German
+  };
+
+  const goToNextWord = () => {
+    setCurrentIndex(currentIndex => (currentIndex + 1) % words[currentLanguage].length);
+    setCurrentLanguage('german'); // Set language to German
+  };
+  
+  const goToPreviousWord = () => {
+    setCurrentIndex(currentIndex => (currentIndex - 1 + words[currentLanguage].length) % words[currentLanguage].length);
+    setCurrentLanguage('german'); // Set language to German
+  };
+  
+
+  return (
+    <div className="app">
+      {!currentTopic ? (
+        <div>
+          <button onClick={() => selectTopic('weather')}>Weather</button>
+          <button onClick={() => selectTopic('introductions')}>Introductions</button>
+          <button onClick={() => selectTopic('other')}>Other</button>
+        </div>
+      ) : (
+        <div>
+          {words[currentLanguage] && words[currentLanguage].length > 0 && (
+  <Flashcard 
+    word={words[currentLanguage][currentIndex % words[currentLanguage].length]} 
+    toggleLanguage={toggleLanguage} 
+  />
+)}
+          <button onClick={goToPreviousWord}>Previous</button>
+          <button onClick={goToNextWord}>Next</button>
+          <button onClick={() => setCurrentTopic(null)}>Change Topic</button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default App;
+
+
+
+/*import React, { useState, useEffect } from 'react';
 import Flashcard from './components/Flashcard'; // Adjust if necessary
 import './App.css';
 
@@ -55,4 +128,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/

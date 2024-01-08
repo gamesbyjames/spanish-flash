@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Flashcard({ word }) {
-    return (
-      <div className="flashcard">
-        {word.word} {/* Accessing the 'word' property of the object */}
-      </div>
-    );
-  }
+const Flashcard = ({ word, toggleLanguage }) => {
+  return (
+    <div className="flashcard" onClick={toggleLanguage}>
+      {word}
+    </div>
+  );
+};
   
 export default Flashcard;
